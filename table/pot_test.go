@@ -3,9 +3,10 @@ package table
 import (
 	"encoding/json"
 	"fmt"
-	"git.mulansoft.com/poker/hand"
-	"git.mulansoft.com/poker/pokertest"
 	"testing"
+
+	"github.com/rolends1986/poker/hand"
+	"github.com/rolends1986/poker/pokertest"
 )
 
 var (

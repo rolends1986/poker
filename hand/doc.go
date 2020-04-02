@@ -5,7 +5,7 @@ Package hand implements poker hand evaluation and ranking.
 
 To install run:
 
-	go get git.mulansoft.com/poker/hand
+	go get github.com/rolends1986/poker/hand
 
 Example usage:
 
@@ -14,7 +14,7 @@ Example usage:
 	import (
 		"fmt"
 
-		"git.mulansoft.com/poker/hand"
+		"github.com/rolends1986/poker/hand"
 	)
 
 	func main() {

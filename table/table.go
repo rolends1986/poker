@@ -7,10 +7,11 @@ import (
 	"reflect"
 	"time"
 
-	"git.mulansoft.com/poker/hand"
-	log "github.com/Sirupsen/logrus"
 	"strconv"
 	"sync"
+
+	log "github.com/Sirupsen/logrus"
+	"github.com/rolends1986/poker/hand"
 )
 
 var (

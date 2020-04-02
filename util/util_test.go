@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"git.mulansoft.com/poker/util"
+	"github.com/rolends1986/poker/util"
 )
 
 type combo struct {

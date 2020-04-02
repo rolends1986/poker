@@ -6,9 +6,10 @@ import (
 	"sort"
 	"strconv"
 
-	"git.mulansoft.com/poker/hand"
-	"gopkg.in/mgo.v2/bson"
 	"sync"
+
+	"github.com/rolends1986/poker/hand"
+	"gopkg.in/mgo.v2/bson"
 )
 
 // Results is a mapping of each seat with its slice of results.
@@ -33,7 +34,7 @@ const (
 
 // A Result is a player's winning result from a showdown.
 type Result struct {
-	PotNo int 		 `json:"potNo"`
+	PotNo int        `json:"potNo"`
 	Hand  *hand.Hand `json:"hand"`
 	Chips int        `json:"chips"`
 	Share Share      `json:"share"`
@@ -157,7 +158,7 @@ func (p *Pot) take(seat int) Results {
 
 // payout takes the high and low hands to produce pot results.
 // Sorting determines how a non-split pot winning hands are sorted.
-func (p *Pot) payout(potNo int,t *Table, highHands, lowHands Hands, sorting hand.Sorting, button int) Results {
+func (p *Pot) payout(potNo int, t *Table, highHands, lowHands Hands, sorting hand.Sorting, button int) Results {
 	sidePots := p.SidePots(t.GetPlayerBeginChips())
 	if len(sidePots) > 1 {
 		results := map[int][]*Result{}
@@ -345,7 +346,7 @@ func (p *Pot) SidePots(playerBeginChips map[int]int) []*Pot {
 			// 2. 在上个底池有玩家 all in 的情况下， 本底池也有玩家 all in，如果本地没有玩家 all in ，是因为弃牌产生的，则并入上个 all in 底池中。
 			sidePots = append(sidePots, pot)
 		} else {
-			last := len(sidePots)-1
+			last := len(sidePots) - 1
 			for seat, chips := range pot.contributions {
 				sidePots[last].contributions[seat] = sidePots[last].contributions[seat] + chips
 			}

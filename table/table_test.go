@@ -3,11 +3,12 @@ package table_test
 import (
 	"encoding/json"
 	"fmt"
-	"git.mulansoft.com/poker/hand"
-	"git.mulansoft.com/poker/pokertest"
-	"git.mulansoft.com/poker/table"
 	"strconv"
 	"testing"
+
+	"github.com/rolends1986/poker/hand"
+	"github.com/rolends1986/poker/pokertest"
+	"github.com/rolends1986/poker/table"
 )
 
 func register() {

@@ -2,8 +2,9 @@ package table
 
 import (
 	"errors"
-	"git.mulansoft.com/poker/hand"
-	"git.mulansoft.com/poker/util"
+
+	"github.com/rolends1986/poker/hand"
+	"github.com/rolends1986/poker/util"
 )
 
 // A Game represents one of the different poker variations.

@@ -4,10 +4,11 @@ import (
 	"errors"
 	"fmt"
 	"game/utils"
-	"git.mulansoft.com/poker/hand"
-	"git.mulansoft.com/poker/table"
 	"strconv"
 	"strings"
+
+	"github.com/rolends1986/poker/hand"
+	"github.com/rolends1986/poker/table"
 )
 
 const (
