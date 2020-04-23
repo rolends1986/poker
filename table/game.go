@@ -3,8 +3,8 @@ package table
 import (
 	"errors"
 
-	"github.com/rolends1986/poker/hand"
-	"github.com/rolends1986/poker/util"
+	"poker/hand"
+	"poker/util"
 )
 
 // A Game represents one of the different poker variations.

@@ -1,6 +1,6 @@
 package table
 
-import "github.com/rolends1986/poker/hand"
+import "poker/hand"
 
 // handCreationFunc represents the function signature for creating a hand.
 type handCreationFunc func(holeCards []*hand.Card, board []*hand.Card) *hand.Hand

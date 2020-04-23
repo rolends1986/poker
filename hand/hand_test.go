@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	. "github.com/rolends1986/poker/hand"
-	"github.com/rolends1986/poker/pokertest"
+	. "poker/hand"
+	"poker/pokertest"
 )
 
 type testPair struct {

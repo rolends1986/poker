@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"sync"
 
-	log "github.com/Sirupsen/logrus"
-	"github.com/rolends1986/poker/hand"
+	log "github.com/sirupsen/logrus"
+	"poker/hand"
 )
 
 var (

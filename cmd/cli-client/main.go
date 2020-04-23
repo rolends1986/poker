@@ -3,12 +3,13 @@ package main
 import (
 	"errors"
 	"fmt"
-	"game/utils"
+	"log"
+
 	"strconv"
 	"strings"
 
-	"github.com/rolends1986/poker/hand"
-	"github.com/rolends1986/poker/table"
+	"poker/hand"
+	"poker/table"
 )
 
 const (
@@ -34,6 +35,21 @@ type player struct {
 	hosted   bool
 }
 
+func StringToInt64(s string) int64 {
+	v64, err := strconv.ParseInt(s, 10, 0)
+	if err != nil {
+		//log.WithFields(log.Fields{
+		//	"s":   s,
+		//	"err": err,
+		//}).Error("StringToInt64 error")
+		return 0
+	}
+	return v64
+}
+
+func Int64ToString(i int64) string {
+	return strconv.FormatInt(i, 10)
+}
 func (p *player) ID() int64 {
 	return p.id
 }
@@ -213,7 +229,7 @@ func printResults(tbl *table.Table, results map[int][]*table.Result) {
 	players := tbl.Players()
 	for seat, resultList := range results {
 		for _, result := range resultList {
-			playerId := utils.Int64ToString(players[seat].Player().ID())
+			playerId :=  Int64ToString(players[seat].Player().ID())
 			fmt.Println(playerId+":", result)
 		}
 	}
@@ -226,7 +242,7 @@ func playerFromInput(desc string) table.Player {
 		fmt.Println("Error", err)
 		return playerFromInput(desc)
 	}
-	return &player{id: utils.StringToInt64(input)}
+	return &player{id:  StringToInt64(input)}
 }
 
 func actionFromInput(input string) (table.Action, error) {
