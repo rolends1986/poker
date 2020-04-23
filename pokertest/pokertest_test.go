@@ -3,8 +3,8 @@ package pokertest_test
 import (
 	"testing"
 
-	"poker/hand"
-	"poker/pokertest"
+	"github.com/rolends1986/poker/hand"
+	"github.com/rolends1986/poker/pokertest"
 )
 
 func TestDeck(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 
 	"sync"
 
-	"poker/hand"
+	"github.com/rolends1986/poker/hand"
 	"gopkg.in/mgo.v2/bson"
 )
 

@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"poker/util"
+	"github.com/rolends1986/poker/util"
 )
 
 // A Ranking is one of the ten possible hand rankings that determine the

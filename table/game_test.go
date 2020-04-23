@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"testing"
 
-	"poker/hand"
-	"poker/pokertest"
+	"github.com/rolends1986/poker/hand"
+	"github.com/rolends1986/poker/pokertest"
 )
 
 var tests = []struct {

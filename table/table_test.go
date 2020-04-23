@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"testing"
 
-	"poker/hand"
-	"poker/pokertest"
-	"poker/table"
+	"github.com/rolends1986/poker/hand"
+	"github.com/rolends1986/poker/pokertest"
+	"github.com/rolends1986/poker/table"
 )
 
 func register() {

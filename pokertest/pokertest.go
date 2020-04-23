@@ -1,6 +1,6 @@
 package pokertest
 
-import "poker/hand"
+import "github.com/rolends1986/poker/hand"
 
 // Cards takes a list of strings that have the format "4s", "Tc",
 // "Ah" instead of the hand.Card String() format "4♠", "T♣", "A♥"

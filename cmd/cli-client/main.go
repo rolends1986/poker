@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"poker/hand"
-	"poker/table"
+	"github.com/rolends1986/poker/hand"
+	"github.com/rolends1986/poker/table"
 )
 
 const (

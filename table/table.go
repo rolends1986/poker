@@ -11,7 +11,7 @@ import (
 	"sync"
 
 	log "github.com/sirupsen/logrus"
-	"poker/hand"
+	"github.com/rolends1986/poker/hand"
 )
 
 var (
