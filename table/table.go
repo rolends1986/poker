@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"sync"
 
-	log "github.com/sirupsen/logrus"
 	"github.com/rolends1986/poker/hand"
+	log "github.com/sirupsen/logrus"
 )
 
 var (
@@ -1489,11 +1489,14 @@ func (t *Table) MaxPotLeadingPlayerForInsurance() Hands {
 // leadingHoleCards: 领先玩家手牌
 // backwardHoleCards: 落后玩家手牌
 // board: 公共牌
-func CalcOuts(leadingHoleCards []*hand.Card, backwardHoleCards [][]*hand.Card, board []*hand.Card) (outs []*hand.Card) {
+func CalcOuts(leadingHoleCards []*hand.Card, backwardHoleCards [][]*hand.Card, board []*hand.Card, excludedBoard bool) (outs []*hand.Card) {
 	// 不计入 OUTS 的牌
 	excludedCards := []*hand.Card{}
 	excludedCards = append(excludedCards, leadingHoleCards...)
-	excludedCards = append(excludedCards, board...)
+	if !excludedBoard {
+		excludedCards = append(excludedCards, board...)
+	}
+
 	for _, item := range backwardHoleCards {
 		excludedCards = append(excludedCards, item...)
 	}
